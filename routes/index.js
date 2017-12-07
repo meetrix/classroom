@@ -3,8 +3,12 @@ var router = express.Router();
 var path=require('path');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+/*router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
+});*/
+router.get('/',function(req,res){
+    console.log(req.url);
+    res.sendFile('nxtbase.html', { root: path.join(__dirname, '../src') });
 });
 router.get('/draw',function(req,res){
     console.log(req.url);
