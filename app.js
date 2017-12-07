@@ -49,7 +49,7 @@ app.use(function(err, req, res, next) {
     return res.render('error');
 });
 
-httpServer.listen(8000);
+httpServer.listen(8002);
 console.log("Server is running");
 
 module.exports = app;
